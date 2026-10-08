@@ -1,0 +1,198 @@
+/* ==========================================================
+   Wu-Tang Clan fan site — shared stylesheet
+   Consolidated from what was previously copy-pasted into
+   every page's inline <style> block.
+   ========================================================== */
+
+body {
+  margin: 0;
+  background-color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------- Header / nav ---------- */
+
+.logo {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  width: 100%;
+}
+
+.inner-main-nav {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.inner-main-nav ul {
+  text-align: right;
+  margin: 0;
+  padding: 60px 0;
+  list-style: none;
+}
+
+.inner-main-nav ul li {
+  float: none;
+  display: inline-block;
+}
+
+.inner-main-nav ul li:nth-child(1),
+.inner-main-nav ul li:nth-child(2) {
+  float: left;
+}
+
+.inner-main-nav ul li a {
+  margin: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #d9d9d9;
+  font-weight: bold;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  color: #d9d9d9;
+  padding: 0 50px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #d9d9d9;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #222222;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ---------- Hero image with hover overlay (homepage) ---------- */
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.container .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #d9d9d9;
+}
+
+.container:hover .overlay {
+  opacity: 0.5;
+}
+
+.text {
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 1;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  max-width: 60%;
+}
+
+/* ---------- Member / album detail pages ---------- */
+
+.image-container {
+  overflow: hidden; /* clearfix for the floated image */
+  padding: 40px;
+}
+
+.image-container img {
+  float: left;
+  border: #d9d9d9 4px solid;
+}
+
+.text-container {
+  margin-left: 20px;
+  color: #d9d9d9;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: bold;
+  max-width: 60%;
+}
+
+.text-container p {
+  margin: 0 0 12px 0;
+}
+
+/* ---------- Game page ---------- */
+
+.center {
+  display: block;
+  margin: 40px auto;
+  width: 50%;
+}
+
+.access-code {
+  text-align: center;
+  color: #d9d9d9;
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 700px) {
+  .image-container img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .text-container {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
